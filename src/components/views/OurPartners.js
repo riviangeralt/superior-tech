@@ -72,7 +72,7 @@ const OurPartners = () => {
         onSwiper={(swiper) => console.log(swiper)}
         loop={true}
         autoplay={{
-          delay: 3000,
+          delay: 1000,
         }}
       >
         {partners.map((item, i) => {
