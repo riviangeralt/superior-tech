@@ -9,3 +9,111 @@
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
 }
+
+.testimonials {
+  flex-direction: column;
+  height: auto;
+}
+
+.testimonials .carousel {
+  /* background-color: blueviolet; */
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.testimonials .carousel .card {
+  width: 100%;
+  height: 20%;
+  margin-top: 20px;
+}
+
+/*Testimonials*/
+
+.testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin: 5% 0;
+}
+
+.testimonial-box {
+  /* width: 30%; */
+  height: 40vh;
+  border-radius: 5px;
+  padding: 20px 25px;
+  text-align: center;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  border: 2px solid rgb(1, 185, 213);
+  border-radius: 126% 50% 80% 100% / 80% 50% 107% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.5s;
+  position: relative;
+  color: #fff;
+}
+
+.testimonial-box:hover {
+  background-color: rgba(1, 185, 213, 1);
+  color: white;
+  box-shadow: 0 0 15px 0 rgb(8, 222, 230);
+  border: none;
+  transform: translateY(-13px);
+  -webkit-transform: translateY(-13px);
+  -moz-transform: translateY(-13px);
+  -ms-transform: translateY(-13px);
+  -o-transform: translateY(-13px);
+}
+
+.testimonial-box .box-left,
+.testimonial-box .box-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-box .box-right h3 {
+  margin-bottom: 10px;
+}
+
+.testimonial-container .testimonial-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-top: 10px;
+}
+
+.testimonial-container .testimonial-box .box-right p {
+  padding: 0px 20px;
+  font-size: 14px;
+  hyphens: auto;
+}
+
+.testimonial-container .testimonial-box a {
+  position: absolute;
+  bottom: -50px;
+  left: 58px;
+  transition: all 1s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.testimonial-container .testimonial-box:hover a {
+  opacity: 1;
+  bottom: 50px;
+  pointer-events: all;
+}
+
+.testimonial-container .testimonial-box a i {
+  color: white;
+}

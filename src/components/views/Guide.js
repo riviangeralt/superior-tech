@@ -17,25 +17,31 @@ const Guide = () => {
 
   const content = [
     {
-      title: "Join Us",
-      description: "Sign up on KEEV for free and start using our services",
+      title: "Schedule A Call",
+      description: "Tell Us Your Query & Requirements. ",
       image: JoinUs,
     },
     {
-      title: "We help you secure your firm!",
-      description: "Choose one of our existing Astra strategies",
+      title: "We help you Connect & secure your firm!",
+      description: "As per Your Requirements, We Strategize the Best Choices For Your Firm",
       image: CreateStrategy,
     },
     {
       title: "Sit Back and Relax",
       description:
-        "Relax after creating strategy as our systems do all the work",
+        "Relax, We Have Maintenance & Annual Maintenance Contracts",
       image: SitBack,
     },
   ];
 
   return (
-    <Stack bg="#F5F5FF" px="10%" py={"4%"} position="relative">
+    <Stack
+      bg="#F5F5FF"
+      px="10%"
+      py={"4%"}
+      position="relative"
+      data-aos="fade-up"
+    >
       <Image src={Arrow} position="absolute" top={"-5%"} />
       <Grid templateColumns="repeat(3, 1fr)" gap={4}>
         {content.map((item, i) => {

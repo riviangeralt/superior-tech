@@ -10,7 +10,6 @@ import {
 import React, { useCallback, useEffect, useState } from "react";
 import NewTrad1 from "assets/svgs/traditional-1.svg";
 import NewTrad2 from "assets/svgs/traditional-2.svg";
-import NewTrad3 from "assets/svgs/traditional-3.svg";
 import NewTrad4 from "assets/svgs/traditional-4.svg";
 import NewTrad5 from "assets/svgs/traditional-5.svg";
 import NewTrad6 from "assets/svgs/traditional-6.svg";
@@ -25,37 +24,39 @@ const Traditional = () => {
   const content = [
     {
       label: "No Human Error",
-      description: "Exact criteria & inputs are executed every single time",
+      description:
+        "No Errors While Installation Of Devices & Top Notch Maintenance",
       image: NewTrad1,
     },
     {
-      label: "Get the best price",
-      description: "Algo trades at high speeds, within few seconds",
+      label: "Get the best Price",
+      description: "Prices So Good, You'll Want More",
       image: NewTrad2,
     },
-    {
-      label: "Become a Disciplined trader",
-      description: "Dump the cycle of fear and greed",
-      image: NewTrad3,
-    },
+    // {
+    //   label: "Become a Disciplined trader",
+    //   description: "Dump the cycle of fear and greed",
+    //   image: NewTrad3,
+    // },
     {
       label: "Works while you sleep",
-      description: "No need to track every market move",
+      description: "Annual Maintenance Contracts, Be Stress Free ",
       image: NewTrad4,
     },
     {
-      label: "100% private & secure",
-      description: "Robust servers & end-to-end encryption",
+      label: "100% Connectvity & Secure",
+      description: "Strong Connectivity & Robust Security",
       image: NewTrad5,
     },
     {
       label: "One stop solution",
-      description: "All your trading requirements under one roof",
+      description:
+        "All your Security & Connectivity requirements under one roof",
       image: NewTrad6,
     },
   ];
   const timeOutCallback = useCallback(
-    () => setSelected((currTimer) => (currTimer > 4 ? 0 : currTimer + 1)),
+    () => setSelected((currTimer) => (currTimer > 3 ? 0 : currTimer + 1)),
     []
   );
 
@@ -103,7 +104,7 @@ const Traditional = () => {
                   <motion.h6
                     style={{
                       fontSize: selected === i ? 24 : 20,
-                      color: selected === i ? "#004A6E" : "#b6b6b6",
+                      color: selected === i ? "#fff" : "#01a2bb",
                       marginLeft: selected === i ? "3rem" : 0,
                     }}
                   >

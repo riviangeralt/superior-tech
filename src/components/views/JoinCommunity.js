@@ -1,6 +1,5 @@
-import { Button, Grid, GridItem, Image, Stack, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import Community from "assets/svgs/community.svg";
 import CommunityBox from "components/elements/CommunityBox";
 
 const JoinCommunity = () => {
@@ -28,7 +27,7 @@ const JoinCommunity = () => {
               <CommunityBox end={60} text="Projects" />
             </GridItem>{" "}
             <GridItem w="100%" textAlign={"center"}>
-              <CommunityBox end={40} text="Projects" />
+              <CommunityBox end={40} text="projects" />
             </GridItem>{" "}
             <GridItem w="100%" textAlign={"center"}>
               <CommunityBox end={6} text="Years of Experience" />

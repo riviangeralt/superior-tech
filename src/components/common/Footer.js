@@ -10,43 +10,17 @@ import {
 import React from "react";
 import Support from "assets/svgs/support.svg";
 import Contact from "assets/svgs/contact.svg";
-import Follow1 from "assets/svgs/follow-1.svg";
-import Follow2 from "assets/svgs/follow-2.svg";
-import Follow3 from "assets/svgs/follow-3.svg";
-import Follow4 from "assets/svgs/follow-4.svg";
 import Follow5 from "assets/svgs/follow-5.svg";
-import Follow6 from "assets/svgs/follow-6.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Footer = (props) => {
   const { features } = props;
   const [isSmallerThan425] = useMediaQuery("(max-width: 425px)");
   const executeScroll = () => features.current.scrollIntoView();
-  const navigate = useNavigate();
   const socials = [
     {
-      image: Follow1,
-      link: "//medium.com/@algokeev",
-    },
-    {
-      image: Follow2,
-      link: "//www.youtube.com/channel/UC_bW6BJvjk9m06n62tl13UQ",
-    },
-    {
-      image: Follow3,
-      link: "//www.linkedin.com/company/keev-novotoc/?viewAsMember=true",
-    },
-    {
-      image: Follow4,
-      link: "//www.facebook.com/keevtrading",
-    },
-    {
       image: Follow5,
-      link: "//www.instagram.com/keev.official/",
-    },
-    {
-      image: Follow6,
-      link: "//lnkd.in/gswq42gH",
+      link: "//www.instagram.com/tech.superior/",
     },
   ];
   return (
@@ -74,7 +48,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Backtest
+                CCTV
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -84,7 +58,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Brokers
+                EPABX & Key Telephone system
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -94,7 +68,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Optimize{" "}
+                IT Solutions{" "}
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -104,7 +78,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Connector
+                Biometrics & Access Control
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -114,7 +88,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Virtual Trading
+                Building Intercom System
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -124,7 +98,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Multiple Segments
+                Building Intercom System
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -134,7 +108,7 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Live Trading{" "}
+                Time Attendance Solution
               </Text>
             </GridItem>
             <GridItem w="100%">
@@ -144,7 +118,17 @@ const Footer = (props) => {
                 cursor="pointer"
                 onClick={() => executeScroll()}
               >
-                Limit Order Placement
+                Voice Loggers
+              </Text>
+            </GridItem>
+            <GridItem w="100%">
+              <Text
+                color="#fff"
+                fontSize={14}
+                cursor="pointer"
+                onClick={() => executeScroll()}
+              >
+                P.A. System
               </Text>
             </GridItem>
           </Grid>
@@ -152,68 +136,33 @@ const Footer = (props) => {
         <GridItem w="100%" colSpan={3}>
           <Grid
             templateColumns={`repeat(${isSmallerThan425 ? 1 : 3}, 1fr)`}
-            gap={2}
+            gap={4}
             paddingLeft={!isSmallerThan425 && 10}
             borderLeft={!isSmallerThan425 && "1.5px solid white"}
           >
             <GridItem w="100%" colSpan={isSmallerThan425 && 3}>
-              <Text fontSize={20} color="#fff" fontWeight={"700 !important"}>
-                Company
-              </Text>
-              <Text
-                color="#fff"
-                mt={2}
-                fontSize={14}
-                onClick={() => navigate("/about-us")}
-                cursor="pointer"
-              >
-                About Us
-              </Text>
-
-              <Text color="#fff" mt={2} fontSize={14}>
-                Careers
-              </Text>
-
-              <Text color="#fff" mt={2} fontSize={14}>
-                FAQ's
-              </Text>
-            </GridItem>
-            <GridItem
-              w="100%"
-              textAlign={!isSmallerThan425 && "right"}
-              colSpan={isSmallerThan425 && 3}
-            >
-              {/* <Text fontSize={20} color="#fff" fontWeight={"700 !important"}>
-                Knowledge Base
-              </Text> */}
-            </GridItem>
-            <GridItem
-              w="100%"
-              textAlign={!isSmallerThan425 && "right"}
-              colSpan={isSmallerThan425 && 3}
-            >
-              {/* <Text fontSize={20} color="#fff" fontWeight={"700 !important"}>
-                Blog
-              </Text> */}
-            </GridItem>
-            <GridItem w="100%" mt={8} colSpan={isSmallerThan425 && 3}>
               <Text color="#FFF" fontSize={20} fontWeight={"700 !important"}>
                 Contact Info
               </Text>
               <Stack spacing={4} marginTop="1rem !important">
                 <HStack
                   cursor="pointer"
-                  onClick={() => window.open("mailto:help@keev.tech", "_blank")}
+                  onClick={() =>
+                    window.open(
+                      "mailto:abdulahad.techsuperior@gmail.com",
+                      "_blank"
+                    )
+                  }
                 >
                   <Image src={Support} />
                   <Text color="#fff" fontSize={14}>
-                    help@keev.tech
+                    abdulahad.techsuperior@gmail.com
                   </Text>
                 </HStack>
                 <HStack>
                   <Image src={Contact} />
                   <Text color="#fff" fontSize={14}>
-                    +91 90824 64920
+                    +91 868 999 8275
                   </Text>
                 </HStack>
               </Stack>
@@ -221,8 +170,7 @@ const Footer = (props) => {
             <GridItem
               w="100%"
               colSpan={2}
-              mt={8}
-              ml={!isSmallerThan425 && 8}
+              ml={!isSmallerThan425 ? 8 : 10}
               mb={isSmallerThan425 && 4}
             >
               <Text color="#FFF" fontSize={20} fontWeight={"700 !important"}>
@@ -247,7 +195,8 @@ const Footer = (props) => {
           mt={"4rem !important"}
         >
           <Text color="#fff">
-            {new Date().getFullYear()} &#169; All Rights Reserved by KEEV
+            {new Date().getFullYear()} &#169; All Rights Reserved by Superior
+            Tech
           </Text>
         </GridItem>
         <GridItem
@@ -256,7 +205,7 @@ const Footer = (props) => {
           textAlign="center"
           mt={"4rem !important"}
         >
-          <Text color="#fff">Developed by Novotoc Infotech Pvt Ltd.</Text>
+          <Text color="#fff">Developed by Gaming Idiots!</Text>
         </GridItem>
       </Grid>
     </Stack>

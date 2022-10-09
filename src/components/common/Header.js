@@ -1,31 +1,34 @@
 import { Button, HStack, Image, Text, useMediaQuery } from "@chakra-ui/react";
 import React from "react";
-// import Logo from "assets/images/logo.png";
+import Logo from "assets/images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = (props) => {
-  const { features } = props;
+  const { features, work, feedback, contact, services } = props;
   const navigate = useNavigate();
   const [isSmallerThan425] = useMediaQuery("(max-width: 425px)");
-  const executeScroll = () => features.current.scrollIntoView();
+  const executeScrollForFeatures = () => features.current.scrollIntoView();
+  const executeScrollForWork = () => work.current.scrollIntoView();
+  const executeScrollForFeedback = () => feedback.current.scrollIntoView();
+  const executeScrollForHome = () => services.current.scrollIntoView();
 
   const links = [
     {
       label: "Home",
       to: "/",
-      onClick: () => {},
+      onClick: () => executeScrollForHome(),
     },
     {
       label: "Services We Offer",
-      onClick: () => {},
+      onClick: () => executeScrollForFeatures(),
     },
     {
       label: "Work",
-      onClick: () => {},
+      onClick: () => executeScrollForWork(),
     },
     {
       label: "Feedbacks",
-      onClick: () => {},
+      onClick: () => executeScrollForFeedback(),
     },
   ];
 
@@ -37,10 +40,19 @@ const Header = (props) => {
       justifyContent={"space-between"}
       // borderBottom="1px solid #ECEDF5"
       bg="#0f223b"
+      position="fixed"
+      top={0}
+      left={0}
+      width="100%"
+      zIndex={111}
     >
       {/* Logo */}
       <Link to="/">
-        {/* <Image src={Logo} w={90} /> */}
+        <Image
+          src={Logo}
+          w={50}
+          onClick={() => services.current.scrollIntoView()}
+        />
       </Link>
       {/* Links */}
 
@@ -68,7 +80,7 @@ const Header = (props) => {
               _hover={{
                 bg: "#01a2bb",
               }}
-              onClick={() => window.open("//app.keev.tech/signup", "_blank")}
+              onClick={() => contact.current.scrollIntoView()}
             >
               Contact Us
             </Button>

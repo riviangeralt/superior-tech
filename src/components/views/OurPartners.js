@@ -16,34 +16,34 @@ import { Link } from "react-router-dom";
 
 SwiperCore.use([Autoplay]);
 
-const OurPartners = () => {
+const OurPartners = (props) => {
   const partners = [
     {
-      link: "//www.angelone.in/",
+      link: "//apex-india.com/",
       icon: Partner1,
     },
     {
-      link: "//bigul.co/",
+      link: "//www.rvcj.com/",
       icon: Partner2,
     },
     {
-      link: "//open-account.fyers.in/?utm-source=AP-Leads&utm-medium=AP1455",
+      link: "//www.facebook.com/Phoenixbuildsmore/",
       icon: Partner3,
     },
     {
-      link: "//www.kotaksecurities.com/open-demat-account/",
+      link: "//alamartravel.com/",
       icon: Partner4,
     },
     {
-      link: "//tradesmartonline.in/?referrer_id=YMUM902",
+      link: "//hajcommittee.gov.in/",
       icon: Partner5,
     },
     {
-      link: "//signup.zerodha.com/",
+      link: "//domo.in/",
       icon: Partner6,
     },
     {
-      link: "//aliceblueonline.com/open-account-fill-kyc-request-call-back",
+      link: "//m.republicworld.com/",
       icon: Partner7,
     },
     // {
@@ -52,7 +52,14 @@ const OurPartners = () => {
     // },
   ];
   return (
-    <Stack px="10%" py="5%" bg="#F5F5FF" position="relative" spacing={4}>
+    <Stack
+      px="10%"
+      py="5%"
+      bg="#F5F5FF"
+      position="relative"
+      spacing={4}
+      ref={props.work}
+    >
       <Image src={Arrow} position="absolute" top={"-5%"} />
       <Text fontSize={28} color="#141414">
         <Text color="#01a2bb" as="span">

@@ -7,14 +7,15 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
-import Offer1 from "assets/svgs/offer-1.svg";
-import Offer2 from "assets/svgs/offer-2.svg";
-import Offer3 from "assets/svgs/offer-3.svg";
-import Offer4 from "assets/svgs/offer-4.svg";
 import Offer5 from "assets/svgs/offer-5.svg";
-import Offer6 from "assets/svgs/offer-6.svg";
-import Offer7 from "assets/svgs/offer-7.svg";
-import Offer8 from "assets/svgs/offer-8.svg";
+import CCTV from "assets/svgs/cctv.svg";
+import EPABX from "assets/svgs/epabx.svg";
+import BioMetric from "assets/svgs/biometric.svg";
+import Intercom from "assets/svgs/building-intercom.svg";
+import Attendance from "assets/svgs/time-attendance.svg";
+import Voice from "assets/svgs/voice-logger.svg";
+import ItSolution from "assets/svgs/it-solution.svg";
+import PASys from "assets/svgs/public-address.svg";
 
 const WhatWeOffer = (props) => {
   const { features } = props;
@@ -24,48 +25,55 @@ const WhatWeOffer = (props) => {
     {
       label: "CCTV",
       description:
-        "No more guessing – create your strategy and test its results",
-      image: Offer1,
+        "Keep An EYE on Everything in Your Firm & Surroundings With Our Finest CCTV Services. ",
+      image: CCTV,
     },
     {
       label: "EPABX & Key Telephone system",
-      description: "Get the best possible returns with lowest losses ",
-      image: Offer2,
+      description: "Get The Best Possible Communication System For Your Firm. ",
+      image: EPABX,
     },
     {
       label: "Biometrics & Access Control",
-      description: "Paper trade before putting your money on the line",
-      image: Offer3,
+      description:
+        " Biometrics can improve security by making it more difficult for unauthorized individuals to gain access to facilities or systems.",
+      image: BioMetric,
     },
     {
       label: "Building Intercom System",
-      description: "Stop spending hours in front of the screen",
-      image: Offer4,
+      description:
+        "Building intercom systems can be used in conjunction with security systems to provide an additional layer of security.",
+      image: Intercom,
     },
     {
       label: "Video Door Phone System",
-      description: "Integrate multiple brokers at once",
+      description:
+        "The system also allows for two-way communication between the visitor & the person inside the building.",
       image: Offer5,
     },
     {
       label: "Time Attendance Solution",
-      description: "Fine tune your strategy to get the best result possible",
-      image: Offer6,
+      description:
+        "Monitor and track employee attendance. It can help you manage employee leaves & generate reports for employee attendance.",
+      image: Attendance,
     },
     {
       label: "Voice Loggers",
-      description: "Trade in equity, futures, options, commodities or all",
-      image: Offer7,
+      description:
+        "The recordings made by voice loggers can be used for various purposes such as monitoring employee performance, training new employees, or investigating customer complaints.",
+      image: Voice,
     },
     {
       label: "IT Solutions",
-      description: "Connect to multiple trading accounts and execute",
-      image: Offer8,
+      description:
+        "IT solutions can help businesses become more efficient, organized & helps businesses improve security & compliance.",
+      image: ItSolution,
     },
-     {
+    {
       label: "P.A. System",
-      description: "Connect to multiple trading accounts and execute",
-      image: Offer8,
+      description:
+        "PA systems are used in a variety of settings, including live music venues, restaurants, schools, and businesses.",
+      image: PASys,
     },
   ];
   return (
@@ -80,7 +88,7 @@ const WhatWeOffer = (props) => {
         <Text as="span" color="#01a2bb">
           What
         </Text>{" "}
-         Superior Tech offers
+        Superior Tech offers
       </Text>
       <Grid
         templateColumns={`repeat(${isSmallerThan425 ? 2 : 3}, 1fr)`}
@@ -88,12 +96,18 @@ const WhatWeOffer = (props) => {
       >
         {content.map((item, i) => {
           return (
-            <GridItem w="100%" key={i} >
-              <Stack border="3px solid #000" height='100%' p={4} boxShadow={'5px 5px 0 0 #000' } bg='#fff'
-              transition='all 0.3s'
-              _hover={{
-                boxShadow:'0 30px 60px 0 #263b5e1a'
-              }}
+            <GridItem w="100%" key={i}>
+              <Stack
+                border="3px solid #000"
+                height="100%"
+                p={4}
+                boxShadow={"5px 5px 0 0 #000"}
+                bg="#fff"
+                transition="all 0.3s"
+                _hover={{
+                  boxShadow: "0 30px 60px 0 #263b5e1a",
+                }}
+                data-aos="fade-up"
               >
                 <Image src={item.image} height={"50px"} width="fit-content" />
                 <Text fontSize={20} color="#141414">
